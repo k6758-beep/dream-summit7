@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>夢想攻頂！正修冒險隊｜高中職畢業生的升學冒險</title>
+<meta name="description" content="蒐集夢想寶物，解鎖你的升學路線，直達未來之門！約 3 分鐘，帶走一張屬於你的升學攻略卡。">
+<meta name="theme-color" content="#0B3A9A">
+<meta property="og:title" content="夢想攻頂！正修冒險隊">
+<meta property="og:description" content="蒐集夢想寶物，解鎖你的升學路線，直達未來之門！">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <section id="world" aria-label="夢想之山地圖">
+    <div id="map"></div>
+    <div id="alt" hidden aria-label="目前海拔"></div>
+  </section>
+  <section id="panel">
+    <header id="hud" hidden>
+      <ol class="pips" id="pips" aria-label="關卡進度"></ol>
+      <div class="tools" role="toolbar" aria-label="遊戲工具">
+        <button class="hbtn" id="btnBack" aria-label="回到上一步">↩<span>上一步</span></button>
+        <button class="hbtn" id="btnSave" aria-label="暫存進度">💾<span>暫存</span></button>
+        <button class="hbtn" id="btnBag" aria-label="冒險背包">🎒<span>背包</span></button>
+        <button class="hbtn" id="btnDex" aria-label="完整升學管道圖鑑">🗺️<span>圖鑑</span></button>
+      </div>
+    </header>
+    <main id="stage" aria-live="polite"></main>
+  </section>
+</div>
+<div id="overlay" hidden></div>
+<div id="toasts" aria-live="polite"></div>
+<noscript><p style="padding:20px">這個遊戲需要開啟 JavaScript 才能玩。</p></noscript>
+
+<!-- 資料層：每年只需要改 data/ 裡的檔案 -->
+<script src="data/admissions.js"></script>
+<script src="data/departments.js"></script>
+<script src="data/qrcodes.js"></script>
+<script src="js/story.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
